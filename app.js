@@ -32,6 +32,7 @@ mongoose.connect("mongodb+srv://buslo:sakshamkl72@buslo.zxjoe.mongodb.net/<dbnam
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
 
+//const secret = process.enc.SECRET || "This is the secret!";
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
