@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BUSLO</title>
+		<link rel="stylesheet" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="footer, address, phone, icons" />
+		
+		<style>
+			html, body {
+				  margin: 0;
+				  padding: 0;
+				  width: 100%;
+			}
+
+			body {
+				  font-family: "Helvetica Neue",sans-serif;
+				  font-weight: lighter;
+			}
+
+			header {
+				  width: 100%;
+				  height: 80vh;
+				  background: url(https://wallpaperaccess.com/full/1628648.jpg) no-repeat 50% 50%;
+				  background-size: cover;
+			}
+
+			.navbar {
+    			transition: all 1.0s;
+			}
+
+			.navbar .nav-link {
+				color: #fff;
+			}
+
+			.navbar .nav-link:hover,
+			.navbar .nav-link:focus {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.navbar .navbar-brand {
+				color: yellow;
+				font-weight: bold;
+				font-size: 30px;
+				letter-spacing: 2px;
+			}
+
+
+			/* Change navbar styling on scroll */
+			.navbar.active {
+				background: rgba(0,0,0,0.6);
+				box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.navbar.active .nav-link {
+				color: #05f5a5;
+			}
+
+			.navbar.active .nav-link:hover,
+			.navbar.active .nav-link:focus {
+				color: #05f5a5;
+				text-decoration: none;
+			}
+
+			.navbar.active .navbar-brand {
+				color: #05f5a5;
+			}
+
+
+			/* Change navbar styling on small viewports */
+			@media (max-width: 991.98px) {
+
+				.navbar .navbar-brand, .navbar .nav-link {
+					color: #05f5a5;
+				}
+			}
+			
+			.row {
+				margin-right: 0;
+				margin-left: 0;
+			}
+			
+			#navs {
+				color: yellow;
+				border: 4px solid blue;
+			}
+			
+			.content {
+				  width: 94%;
+				  margin: 2em auto;
+				  font-size: 20px;
+				  line-height: 30px;
+				  text-align: center;
+				  color: #3a6b48;
+				  font-weight: bold;
+			}
+			
+			.content #con {
+				font-size: 40px;
+				color: #000;
+			}
+			
+			.get {
+				  width: 94%;
+				  margin: 1em auto;
+				  font-size: 40px;
+				  line-height: 30px;
+				  text-align: center;
+				  color: #22bdad;
+				  font-weight: bold;
+			}
+			#log {
+				color: #ff9966;
+			}
+			.container {
+				margin-left: 0;
+			}
+			
+			.container .navbar-brand {
+				margin-right: 900px;
+			}
+			footer{
+				position: fixed;
+				bottom: 0;
+			}
+
+			@media (max-height:800px){
+				footer { position: static; }
+				/* header { padding-top:40px; } */
+			}
+
+
+			.footer-distributed{
+				background-color: #2c292f;
+				box-sizing: border-box;
+				width: 100%;
+				text-align: left;
+				font: bold 16px sans-serif;
+				padding: 50px 50px 60px 50px;
+				margin-top: 80px;
+			}
+
+			.footer-distributed .footer-left,
+			.footer-distributed .footer-center,
+			.footer-distributed .footer-right{
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			/* Footer left */
+
+			.footer-distributed .footer-left{
+				width: 30%;
+			}
+
+			.footer-distributed h3{
+				color:  #ffffff;
+				font: normal 36px 'Cookie', cursive;
+				margin: 0;
+			}
+
+			/* The company logo */
+
+			.footer-distributed .footer-left img{
+				width: 30%;
+			}
+
+			.footer-distributed h3 span{
+				color:  #e0ac1c;
+			}
+
+			/* Footer links */
+
+			.footer-distributed .footer-links{
+				color:  #ffffff;
+				margin: 20px 0 12px;
+			}
+
+			.footer-distributed .footer-links a{
+				display:inline-block;
+				line-height: 1.8;
+				text-decoration: none;
+				color:  inherit;
+			}
+
+			.footer-distributed .footer-company-name{
+				color:  #8f9296;
+				font-size: 14px;
+				font-weight: normal;
+				margin: 0;
+			}
+
+			/* Footer Center */
+
+			.footer-distributed .footer-center{
+				width: 35%;
+			}
+
+
+			.footer-distributed .footer-center i{
+				background-color:  #33383b;
+				color: #ffffff;
+				font-size: 25px;
+				width: 38px;
+				height: 38px;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 42px;
+				margin: 10px 15px;
+				vertical-align: middle;
+			}
+
+			.footer-distributed .footer-center i.fa-envelope{
+				font-size: 17px;
+				line-height: 38px;
+			}
+
+			.footer-distributed .footer-center p{
+				display: inline-block;
+				color: #ffffff;
+				vertical-align: middle;
+				margin:0;
+			}
+
+			.footer-distributed .footer-center p span{
+				display:block;
+				font-weight: normal;
+				font-size:14px;
+				line-height:2;
+			}
+
+			.footer-distributed .footer-center p a{
+				color:  #e0ac1c;
+				text-decoration: none;;
+			}
+
+
+			/* Footer Right */
+
+			.footer-distributed .footer-right{
+				width: 30%;
+			}
+
+			.footer-distributed .footer-company-about{
+				line-height: 20px;
+				color:  #92999f;
+				font-size: 13px;
+				font-weight: normal;
+				margin: 0;
+			}
+
+			.footer-distributed .footer-company-about span{
+				display: block;
+				color:  #ffffff;
+				font-size: 18px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+
+			.footer-distributed .footer-icons{
+				margin-top: 25px;
+			}
+
+			.footer-distributed .footer-icons a{
+				display: inline-block;
+				width: 35px;
+				height: 35px;
+				cursor: pointer;
+				background-color:  #33383b;
+				border-radius: 2px;
+
+				font-size: 20px;
+				color: #ffffff;
+				text-align: center;
+				line-height: 35px;
+
+				margin-right: 3px;
+				margin-bottom: 5px;
+			}
+
+			/* Here is the code for Responsive Footer */
+			/* You can remove below code if you don't want Footer to be responsive */
+
+
+			@media (max-width: 880px) {
+
+				.footer-distributed .footer-left,
+				.footer-distributed .footer-center,
+				.footer-distributed .footer-right{
+					display: block;
+					width: 100%;
+					margin-bottom: 40px;
+					text-align: center;
+				}
+
+				.footer-distributed .footer-center i{
+					margin-left: 0;
+				}
+
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<nav class="navbar navbar-expand-lg fixed-top py-3">
+				<div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold"><i id="log" class="fas fa-bus fa-2x"></i>BUSLO</a>
+					<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-	expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i id="navs" class="fa fa-bars"></i></button>
+
+					<div id="navbarSupportedContent" class="collapse navbar-collapse">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active"><a href="/" class="nav-link text-uppercase font-weight-bold">Home <i class="fas fa-home"></i><span class="sr-only">(current)</span></a></li>
+							<li class="nav-item"><a href="#con" class="nav-link text-uppercase font-weight-bold">About</a></li>
+							<li class="nav-item"><a href="/login" class="nav-link text-uppercase font-weight-bold">Login <i class="fas fa-sign-in-alt"></i></a></li>
+							<li class="nav-item"><a href="/register" class="nav-link text-uppercase font-weight-bold">Signup <i class="fas fa-user-plus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="content">
+			<h3 id="con">
+				About
+			</h3>
+            <p>
+       			Welcome to our website BUSLO 
+            </p>
+			<p>
+				BUSLO aims to provide assistance to Students and Transport Administrators to keep a track of schedules
+			</p>
+        </div>
+		<div class="get">
+			<h2>
+				Get Started
+			</h2>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<div class="card border-primary mb-3" style="max-width: 100%; text-align: center;">
+  					<div class="card-body text-primary">
+    					<h2 class="card-title">LogIn</h2>
+    					<p class="card-text">Login to use our website and for further information.</p>
+	  					<a type="button" href="/login" class="btn btn-outline-primary">LOGIN</a>
+  					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<div class="card border-success mb-3" style="max-width: 100%; text-align: center;">
+  					<div class="card-body text-success">
+    					<h2 class="card-title">SignUp</h2>
+    					<p class="card-text">If you don't have an account please register to use our website.</p>
+	  					<a type="button" href="/register" class="btn btn-outline-success">SIGNUP</a>
+  					</div>		
+				</div>
+      		</div>
+		</div>
+		<footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>About<span>BUSLO</span></h3>
+				<p class="footer-links">
+					<a href="/">Home</a>
+					|
+					<a href="/">About</a>
+					|
+					<a href="tel:9537408955">Contact</a>
+				</p>
+				<p class="footer-company-name">© 2020 BUSLO Pvt. Ltd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><a href="https://www.google.co.in/maps/place/Birla+Nagar,+Gwalior,+Madhya+Pradesh/@26.2297803,78.1835531,17.41z/data=!4m5!3m4!1s0x3976c6c76da7ebe9:0x9b308f4d5e307e4b!8m2!3d26.2359851!4d78.1889814"><span>19 - New Colony,
+						No. 3-A, Birla Nagar</span>
+						Gwalior, Madhya Pradesh - 474001</a></p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>
+						<a href="tel:9537408955">+91 9537408955</a>
+					</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@buslo.com">support@buslo.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					BUSLO aims to provide assistance to Students and Transport Administrators to keep a track of schedules.</p>
+				<div class="footer-icons">
+					<a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+					<a href="https://twitter.com/login?lang=en"><i class="fab fa-twitter"></i></a>
+					<a href="https://www.instagram.com/?hl=en"><i class="fab fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+					<a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			$(function () {
+				$(window).on('scroll', function () {
+					if ( $(window).scrollTop() > 10 ) {
+						$('.navbar').addClass('active');
+					} else {
+						$('.navbar').removeClass('active');
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

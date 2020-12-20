@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+		<title>Stripe Payment Demo</title> 
+		<style>
+			body {
+				background-image: url("https://d11wkw82a69pyn.cloudfront.net/siteassets/images/efinance/canvas_06-mobile-digital-pay_low.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		</style>
+	</head>
+<body> 
+    <h3>Welcome to Payment Gateway</h3> 
+    <form action="payment" method="POST"> 
+       <script 
+          src="//checkout.stripe.com/v2/checkout.js"
+          class="stripe-button"
+          data-key="<%= key %>" 
+          data-amount="2500" 
+          data-currency="inr" 
+          data-name="BUSLO"  
+          data-locale="auto" > 
+        </script> 
+    </form> 
+</body> 
+</html> 
