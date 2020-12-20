@@ -190,6 +190,11 @@ app.get("*", function(req, res) {
 	res.send("Error");
 });
 
-server.listen(3000, function() {
-	console.log("Server Started");
-});
+// server.listen(3000, function() {
+// 	console.log("Server Started");
+// });
+
+const port = process.env.PORT || 3000;
+app.listen(port, function() {
+	console.log("server started");
+})
