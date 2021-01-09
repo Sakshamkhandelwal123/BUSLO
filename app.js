@@ -13,17 +13,8 @@ var path = require('path');
 
 //mongodb+srv://our_first_user:<password>@cluster0.n5xe2.mongodb.net/<dbname>?retryWrites=true&w=majority
 const mongoose = require("mongoose");
-// var url = process.env.DATABASEURL || "mongodb://localhost/bus_lo";
-// mongoose.connect(url, {
-// 	useNewUrlParser: true,
-// 	useUnifiedTopology: true,
-// 	useCreateIndex: true,
-// 	useFindAndModify: false
-// })
-// .then(() => console.log('Connected to DB!'))
-// .catch(error => console.log(error.message));
-
-mongoose.connect("mongodb+srv://buslo:sakshamkl72@buslo.zxjoe.mongodb.net/<dbname>?retryWrites=true&w=majority", {
+var url = process.env.DATABASEURL || "mongodb://localhost/bus_lo";
+mongoose.connect(url, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useCreateIndex: true,
@@ -31,6 +22,15 @@ mongoose.connect("mongodb+srv://buslo:sakshamkl72@buslo.zxjoe.mongodb.net/<dbnam
 })
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
+
+// mongoose.connect("mongodb+srv://buslo:sakshamkl72@buslo.zxjoe.mongodb.net/<dbname>?retryWrites=true&w=majority", {
+// 	useNewUrlParser: true,
+// 	useUnifiedTopology: true,
+// 	useCreateIndex: true,
+// 	useFindAndModify: false
+// })
+// .then(() => console.log('Connected to DB!'))
+// .catch(error => console.log(error.message));
 
 //const secret = process.enc.SECRET || "This is the secret!";
 
@@ -196,6 +196,6 @@ app.get("*", function(req, res) {
 // });
 
 const port = process.env.PORT || 3000;
-app.listen(port, function() {
+server.listen(port, function() {
 	console.log("server started");
 })
